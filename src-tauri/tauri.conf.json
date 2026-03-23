@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Chops Core",
+  "productName": "Skills Manager",
   "version": "0.1.0",
   "identifier": "com.hoppe.chopscore",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Chops Core",
+        "title": "Skills Manager",
         "width": 1280,
         "height": 820,
         "minWidth": 1100,
