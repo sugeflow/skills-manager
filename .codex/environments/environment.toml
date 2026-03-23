@@ -9,3 +9,8 @@ script = ""
 name = "Run"
 icon = "run"
 command = "npm run tauri dev"
+
+[[actions]]
+name = "preview"
+icon = "tool"
+command = "npm run site:preview"

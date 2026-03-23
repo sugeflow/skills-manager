@@ -696,9 +696,9 @@ body::before {
   }
 
   .hero h1 {
-    max-width: 11ch;
-    font-size: clamp(2.15rem, 11vw, 3.2rem);
-    line-height: 0.98;
+    max-width: 12ch;
+    font-size: clamp(1.8rem, 8.8vw, 2.55rem);
+    line-height: 1.01;
   }
 
   .button {
