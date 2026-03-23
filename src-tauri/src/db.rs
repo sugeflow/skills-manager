@@ -22,7 +22,7 @@ impl Database {
             .duration_since(std::time::UNIX_EPOCH)
             .unwrap_or_default()
             .as_nanos();
-        let path = std::env::temp_dir().join(format!("chops-core-{unique}.sqlite3"));
+        let path = std::env::temp_dir().join(format!("skills-manager-{unique}.sqlite3"));
         Self::open(path)
     }
 

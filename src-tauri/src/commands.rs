@@ -17,7 +17,7 @@ pub struct AppState {
 impl AppState {
     pub fn new() -> Result<Self> {
         let mut base = dirs::data_local_dir().unwrap_or_else(std::env::temp_dir);
-        base.push("chops-core");
+        base.push("skills-manager");
         std::fs::create_dir_all(&base)?;
         let db = Database::open(base.join("index.sqlite3"))?;
         Ok(Self { db: Mutex::new(db) })

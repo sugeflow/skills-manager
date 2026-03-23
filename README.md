@@ -1,6 +1,10 @@
-# Chops Core
+# Skills Manager
 
-A local-first Tauri + React clone of the core Chops workflow:
+Local-first desktop app for organizing, searching, and editing AI agent skills.
+
+![Skills Manager Screenshot](./docs/images/skills-manager-screenshot.png)
+
+Skills Manager helps you:
 
 - scan local AI skill directories
 - normalize different file layouts into one indexed model

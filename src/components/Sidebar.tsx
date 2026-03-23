@@ -43,7 +43,7 @@ export function Sidebar({
     <aside className="sidebar">
       <div className="sidebar__brand">
         <div>
-          <p className="eyebrow">Chops Core</p>
+          <p className="eyebrow">Skills Manager</p>
           <h1>Skill Index</h1>
         </div>
         <button className="button button--secondary" onClick={onRescan}>

@@ -313,21 +313,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
 
 [[package]]
-name = "chops-core"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "dirs 5.0.1",
- "rusqlite",
- "serde",
- "serde_json",
- "shellexpand",
- "tauri",
- "tauri-build",
- "tempfile",
-]
-
-[[package]]
 name = "chrono"
 version = "0.4.44"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3172,6 +3157,21 @@ name = "siphasher"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b2aa850e253778c88a04c3d7323b043aeda9d3e30d5971937c1855769763678e"
+
+[[package]]
+name = "skills-manager"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "dirs 5.0.1",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "shellexpand",
+ "tauri",
+ "tauri-build",
+ "tempfile",
+]
 
 [[package]]
 name = "slab"
