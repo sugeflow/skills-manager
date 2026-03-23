@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "site:preview": "python3 -m http.server 4173 --directory site",
+    "site:deploy": "./scripts/deploy-site.sh"
   },
   "dependencies": {
     "react": "^19.1.0",

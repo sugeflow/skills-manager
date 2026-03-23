@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Manager</title>
+    <meta
+      name="description"
+      content="Local-first desktop app to scan, search, and edit AI agent skills across Claude, Cursor, Codex, and OpenClaw."
+    />
+    <meta name="theme-color" content="#efe4d2" />
+    <meta property="og:title" content="Skills Manager" />
+    <meta
+      property="og:description"
+      content="One desktop app for scanning, editing, and shipping AI agent skills."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://skill.sugeflow.com" />
+    <meta property="og:image" content="https://skill.sugeflow.com/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Skills Manager home">
+          <img src="./icon.png" alt="" />
+          <span>Skills Manager</span>
+        </a>
+        <nav class="topnav">
+          <a href="#features">Features</a>
+          <a href="#agents">Agents</a>
+          <a href="#download">Download</a>
+          <a href="https://github.com/sugeflow/skills-manager" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">Local-first desktop utility</div>
+            <h1>One place to manage every agent skill on your machine.</h1>
+            <p class="hero-body">
+              Scan local skill directories, search across content, edit the source files directly,
+              and keep Claude, Cursor, Codex, and OpenClaw aligned from one focused desktop app.
+            </p>
+            <div class="cta-row">
+              <a class="button button-primary" href="#download">Download v0.1.0</a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/sugeflow/skills-manager/releases/tag/v0.1.0"
+                target="_blank"
+                rel="noreferrer"
+                >Release notes</a
+              >
+            </div>
+            <ul class="hero-notes">
+              <li>Source files stay canonical</li>
+              <li>SQLite index for instant search</li>
+              <li>macOS, Linux, and Windows packages</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="product-shot">
+              <div class="window-chrome">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="window-layout">
+                <aside class="panel panel-sidebar">
+                  <div class="panel-label">Sources</div>
+                  <div class="source-pill active">Claude</div>
+                  <div class="source-pill">Cursor</div>
+                  <div class="source-pill">Codex</div>
+                  <div class="source-pill">OpenClaw</div>
+                </aside>
+                <section class="panel panel-list">
+                  <div class="panel-label">Indexed skills</div>
+                  <div class="list-card active">
+                    <strong>release-notes</strong>
+                    <span>Generate structured release summaries from recent commits.</span>
+                  </div>
+                  <div class="list-card">
+                    <strong>deploy-checks</strong>
+                    <span>Validate environment variables and production switches.</span>
+                  </div>
+                  <div class="list-card">
+                    <strong>redbookskills</strong>
+                    <span>Publish Xiaohongshu content flows with browser automation.</span>
+                  </div>
+                </section>
+                <section class="panel panel-detail">
+                  <div class="panel-label">Direct file editing</div>
+                  <div class="editor-card">
+                    <div class="editor-line heading"># release-notes</div>
+                    <div class="editor-line short"></div>
+                    <div class="editor-line"></div>
+                    <div class="editor-line"></div>
+                    <div class="editor-line medium"></div>
+                    <div class="editor-line short"></div>
+                    <div class="editor-footer">
+                      <span>~/ .codex / skills / release-notes / SKILL.md</span>
+                      <span class="save-badge">Saved</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="value-band">
+          <p>
+            Skills Manager is for people who already have a mess of scattered `SKILL.md`,
+            `AGENTS.md`, and rule files and want a faster way to index, inspect, and maintain them.
+          </p>
+        </section>
+
+        <section class="section" id="features">
+          <div class="section-heading">
+            <div class="eyebrow">Why it exists</div>
+            <h2>Skills sprawl is manageable when the disk stays primary and the interface stays sharp.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature feature-large">
+              <span class="feature-kicker">Scan</span>
+              <h3>Normalize scattered skill layouts into one index.</h3>
+              <p>
+                The app walks known directories, parses frontmatter or headings, resolves real paths,
+                and builds a fast local index without taking ownership away from your files.
+              </p>
+            </article>
+            <article class="feature">
+              <span class="feature-kicker">Search</span>
+              <h3>Find a skill by name, description, or content.</h3>
+              <p>SQLite-backed search keeps large local libraries usable without waiting on network services.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-kicker">Edit</span>
+              <h3>Write back to the source file directly.</h3>
+              <p>No export step, no shadow copy, and no secondary format to keep in sync.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-kicker">Portable</span>
+              <h3>Built for local-first workflows.</h3>
+              <p>The desktop app stays focused on local files, instant feedback, and minimal ceremony.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section agents-section" id="agents">
+          <div class="section-heading compact">
+            <div class="eyebrow">Supported agents</div>
+            <h2>One surface across the tools you already use.</h2>
+          </div>
+          <div class="agent-strip">
+            <div class="agent-chip">
+              <span class="agent-name">Claude</span>
+              <span class="agent-path">~/.claude/skills</span>
+            </div>
+            <div class="agent-chip">
+              <span class="agent-name">Cursor</span>
+              <span class="agent-path">~/.cursor/skills</span>
+            </div>
+            <div class="agent-chip">
+              <span class="agent-name">Codex</span>
+              <span class="agent-path">~/.codex</span>
+            </div>
+            <div class="agent-chip">
+              <span class="agent-name">OpenClaw</span>
+              <span class="agent-path">~/.openclaw/skills</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section download-section" id="download">
+          <div class="section-heading compact">
+            <div class="eyebrow">Download</div>
+            <h2>Install the current release directly from GitHub.</h2>
+          </div>
+          <div class="download-grid">
+            <a class="download-card" href="https://github.com/sugeflow/skills-manager/releases/download/v0.1.0/Skills.Manager_0.1.0_aarch64.dmg">
+              <span class="platform">macOS</span>
+              <strong>Apple Silicon DMG</strong>
+              <small>Unsigned build. First launch may require Gatekeeper bypass.</small>
+            </a>
+            <a class="download-card" href="https://github.com/sugeflow/skills-manager/releases/download/v0.1.0/Skills.Manager_0.1.0_amd64.deb">
+              <span class="platform">Linux</span>
+              <strong>Debian / Ubuntu DEB</strong>
+              <small>For Debian-family systems.</small>
+            </a>
+            <a class="download-card" href="https://github.com/sugeflow/skills-manager/releases/download/v0.1.0/Skills.Manager_0.1.0_amd64.AppImage">
+              <span class="platform">Linux</span>
+              <strong>AppImage</strong>
+              <small>Portable single-file build for x64 Linux.</small>
+            </a>
+            <a class="download-card" href="https://github.com/sugeflow/skills-manager/releases/download/v0.1.0/Skills.Manager-0.1.0-1.x86_64.rpm">
+              <span class="platform">Linux</span>
+              <strong>RPM</strong>
+              <small>For Fedora, RHEL, and compatible distributions.</small>
+            </a>
+            <a class="download-card" href="https://github.com/sugeflow/skills-manager/releases/download/v0.1.0/Skills.Manager_0.1.0_x64-setup.exe">
+              <span class="platform">Windows</span>
+              <strong>Setup EXE</strong>
+              <small>Recommended installer for most Windows users.</small>
+            </a>
+            <a class="download-card" href="https://github.com/sugeflow/skills-manager/releases/download/v0.1.0/Skills.Manager_0.1.0_x64_en-US.msi">
+              <span class="platform">Windows</span>
+              <strong>MSI</strong>
+              <small>Alternative installer for managed Windows environments.</small>
+            </a>
+          </div>
+        </section>
+
+        <section class="section faq-section">
+          <div class="section-heading compact">
+            <div class="eyebrow">FAQ</div>
+            <h2>Operational details before you install.</h2>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item">
+              <h3>Why does macOS say the app is damaged?</h3>
+              <p>
+                The current macOS package is not notarized yet. Gatekeeper treats that as an
+                untrusted unsigned build. Use Finder right-click Open or remove the quarantine
+                attribute manually after you move the app into Applications.
+              </p>
+            </article>
+            <article class="faq-item">
+              <h3>Does the app keep a second copy of my skills?</h3>
+              <p>
+                No. Disk files remain the source of truth. The local SQLite database is only an
+                index for search and filtering.
+              </p>
+            </article>
+            <article class="faq-item">
+              <h3>Is there a hosted sync service?</h3>
+              <p>
+                Not in this release. The current scope is local-first desktop management of skill
+                files that already exist on your machine.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Skills Manager</strong>
+          <span>v0.1.0</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/sugeflow/skills-manager" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/sugeflow/skills-manager/releases/tag/v0.1.0" target="_blank" rel="noreferrer">Release</a>
+          <a href="https://skill.sugeflow.com">skill.sugeflow.com</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
