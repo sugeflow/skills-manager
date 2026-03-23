@@ -39,6 +39,11 @@ pub fn default_scan_roots() -> Vec<ScanRoot> {
             path: format!("{home}/.codex"),
             is_global: true,
         },
+        ScanRoot {
+            tool_source: "openclaw".into(),
+            path: format!("{home}/.openclaw/skills"),
+            is_global: true,
+        },
     ]
 }
 
@@ -233,5 +238,29 @@ mod tests {
         assert_eq!(results[0].name, "Codex Rules");
         assert_eq!(results[0].format, "agents_md");
         assert!(!results[0].is_directory_skill);
+    }
+
+    #[test]
+    fn scans_openclaw_skill_directories() {
+        let dir = tempdir().expect("tempdir");
+        let skill_dir = dir.path().join("triage-agent");
+        fs::create_dir_all(&skill_dir).expect("create skill dir");
+        fs::write(
+            skill_dir.join("SKILL.md"),
+            "---\nname: triage-agent\ndescription: OpenClaw triage skill\n---\n# ignore",
+        )
+        .expect("write skill");
+
+        let results = super::scan_roots(&[ScanRoot {
+            tool_source: "openclaw".into(),
+            path: dir.path().to_string_lossy().to_string(),
+            is_global: true,
+        }])
+        .expect("scan roots");
+
+        assert_eq!(results.len(), 1);
+        assert_eq!(results[0].tool_source, "openclaw");
+        assert_eq!(results[0].name, "triage-agent");
+        assert_eq!(results[0].description, "OpenClaw triage skill");
     }
 }

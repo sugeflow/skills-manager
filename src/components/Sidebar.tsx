@@ -16,6 +16,8 @@ function toolLabel(tool: string) {
       return "Cursor";
     case "codex":
       return "Codex";
+    case "openclaw":
+      return "OpenClaw";
     case "custom":
       return "Custom";
     default:

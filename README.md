@@ -23,6 +23,7 @@ Supported sources:
 - `~/.cursor/skills`
 - `~/.cursor/rules`
 - `~/.codex`
+- `~/.openclaw/skills`
 
 Implemented capabilities:
 

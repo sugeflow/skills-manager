@@ -1,4 +1,4 @@
-export type ToolSource = "claude" | "cursor" | "codex" | "custom";
+export type ToolSource = "claude" | "cursor" | "codex" | "openclaw" | "custom";
 
 export interface SkillRecord {
   id: number;
